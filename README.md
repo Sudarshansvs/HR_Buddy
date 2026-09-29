@@ -48,7 +48,7 @@ python run.py
 ```
 
 This starts:
-- the backend at `http://127.0.0.1:8000`
+- the backend at `http://127.0.0.1:8080`
 - the frontend at the default Streamlit URL
 
 ## Use the app

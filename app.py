@@ -1,5 +1,10 @@
+import time
+
 import streamlit as st
 import requests
+
+
+BACKEND_URL = "http://127.0.0.1:8080/ask"
 
 
 st.set_page_config(
@@ -14,6 +19,23 @@ question = st.text_input(
 )
 
 
+def ask_backend(question_text: str):
+    last_error = None
+
+    for _ in range(15):
+        try:
+            return requests.post(
+                BACKEND_URL,
+                json={"question": question_text},
+                timeout=30,
+            )
+        except requests.exceptions.ConnectionError as exc:
+            last_error = exc
+            time.sleep(1)
+
+    raise last_error
+
+
 if st.button("Ask HR Buddy"):
 
     if not question:
@@ -21,13 +43,14 @@ if st.button("Ask HR Buddy"):
         st.warning("Please enter a question.")
 
     else:
-
-        response = requests.post(
-            "http://127.0.0.1:8000/ask",
-            json={
-                "question": question
-            }
-        )
+        try:
+            response = ask_backend(question)
+        except requests.exceptions.RequestException:
+            st.error(
+                "The HR Buddy backend is not running. Start it with `python run.py` "
+                "or run `uvicorn llm_test_2:app --host 127.0.0.1 --port 8080`."
+            )
+            st.stop()
 
         if response.status_code == 200:
 
@@ -39,4 +62,4 @@ if st.button("Ask HR Buddy"):
 
         else:
 
-            st.error("Something went wrong.")
+            st.error(f"Something went wrong. API returned status {response.status_code}.")
