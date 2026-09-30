@@ -4,6 +4,8 @@ from hr_buddy.app.services.llm_service import LLMService
 from hr_buddy.app.services.retrieval_service import (
     RetrievalService
 )
+from hr_buddy.app.models.requests import RAGConfig
+from hr_buddy.app.core.query_logger import save_query_response
 
 
 logger = logging.getLogger(__name__)
@@ -19,26 +21,40 @@ class ChatService:
             RetrievalService()
         )
 
-    def ask(self, question):
+    def ask(self, question, rag_config: RAGConfig | None = None):
 
         logger.info(
             "Processing HR question"
         )
 
+        # Use provided config or defaults
+        if rag_config is None:
+            rag_config = RAGConfig()
+
         results = (
             self.retrieval.search(
-                question
+                question,
+                top_k=rag_config.top_k
             )
         )
 
         if not results:
 
+            answer = (
+                "I could not find "
+                "relevant information "
+                "in the HR knowledge base."
+            )
+            save_query_response(
+                question=question,
+                answer=answer,
+                sources=[],
+                chunk_size=self.retrieval.chunk_size,
+                chunk_overlap=self.retrieval.chunk_overlap,
+                top_k=rag_config.top_k,
+            )
             return {
-                "answer": (
-                    "I could not find "
-                    "relevant information "
-                    "in the HR knowledge base."
-                ),
+                "answer": answer,
                 "sources": []
             }
 
@@ -70,6 +86,15 @@ class ChatService:
                     ]
                 }
             )
+
+        save_query_response(
+            question=question,
+            answer=answer,
+            sources=sources,
+            chunk_size=self.retrieval.chunk_size,
+            chunk_overlap=self.retrieval.chunk_overlap,
+            top_k=rag_config.top_k,
+        )
 
         return {
             "answer": answer,

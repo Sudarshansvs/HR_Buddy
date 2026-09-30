@@ -5,8 +5,8 @@ from dotenv import load_dotenv
 
 load_dotenv()
 
-# Get the project root directory
-PROJECT_ROOT = Path(__file__).parent.parent.parent
+# Use the repository root, not the package directory, as the base path
+PROJECT_ROOT = Path(__file__).resolve().parents[3]
 
 
 class Settings:
@@ -22,6 +22,16 @@ class Settings:
         "http://localhost:11434"
     )
 
+    DOCUMENTS_PATH: str = os.getenv(
+        "DOCUMENTS_PATH",
+        str(PROJECT_ROOT / "data" / "documents")
+    )
+
+    VECTOR_DB_PATH: str = os.getenv(
+        "VECTOR_DB_PATH",
+        str(PROJECT_ROOT / "data" / "vector_db")
+    )
+
     TOP_K: int = int(
         os.getenv("TOP_K", "5")
     )
@@ -34,14 +44,9 @@ class Settings:
         os.getenv("CHUNK_OVERLAP", "100")
     )
 
-    DOCUMENTS_PATH: str = os.getenv(
-        "DOCUMENTS_PATH",
-        str(PROJECT_ROOT / "hr_buddy" / "data" / "documents")
-    )
-
-    VECTOR_DB_PATH: str = os.getenv(
-        "VECTOR_DB_PATH",
-        str(PROJECT_ROOT / "hr_buddy" / "data" / "vector_db")
+    QUERY_LOG_PATH: str = os.getenv(
+        "QUERY_LOG_PATH",
+        str(PROJECT_ROOT / "data" / "query_logs.json")
     )
 
 

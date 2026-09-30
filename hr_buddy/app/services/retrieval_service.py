@@ -11,13 +11,20 @@ logger = logging.getLogger(__name__)
 
 class RetrievalService:
 
-    def __init__(self):
+    def __init__(self, chunk_size: int = None, chunk_overlap: int = None):
 
         self.loader = DocumentLoader(
             settings.DOCUMENTS_PATH
         )
 
-        self.chunker = TextChunker()
+        # Use provided config or defaults from settings
+        self.chunk_size = chunk_size or settings.CHUNK_SIZE
+        self.chunk_overlap = chunk_overlap or settings.CHUNK_OVERLAP
+
+        self.chunker = TextChunker(
+            chunk_size=self.chunk_size,
+            chunk_overlap=self.chunk_overlap
+        )
 
         self.retriever = Retriever()
 
@@ -68,9 +75,12 @@ class RetrievalService:
         except Exception as e:
             logger.error("Failed to build vector index: %s", e)
 
-    def search(self, question):
+    def search(self, question, top_k: int = None):
+
+        if top_k is None:
+            top_k = settings.TOP_K
 
         return self.retriever.retrieve(
             question,
-            settings.TOP_K
+            top_k
         )

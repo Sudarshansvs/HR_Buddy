@@ -21,7 +21,8 @@ chat_service = ChatService()
 def chat(request: ChatRequest):
 
     result = chat_service.ask(
-        request.question
+        request.question,
+        rag_config=request.rag_config
     )
 
     return ChatResponse(

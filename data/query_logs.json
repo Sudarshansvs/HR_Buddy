@@ -1,0 +1,86 @@
+[
+  {
+    "chunk_size": 500,
+    "chunk_overlap": 100,
+    "top_k": 5,
+    "user_query": "What is the leave policy?",
+    "citation_document_names_with_scores": [
+      {
+        "document": "leave_policy.txt",
+        "score": 0.91
+      },
+      {
+        "document": "onboarding.txt",
+        "score": 0.73
+      }
+    ],
+    "response_from_llm_first_50_words": "Employees can take up to 15 days of annual leave after completing 6 months of service. The policy also includes maternity leave and personal days.",
+    "response": "Employees can take up to 15 days of annual leave after completing 6 months of service. The policy also includes maternity leave and personal days."
+  },
+  {
+    "chunk_size": 500,
+    "chunk_overlap": 100,
+    "top_k": 5,
+    "user_query": "what is leave policy ?",
+    "citation_document_names_with_scores": [
+      {
+        "document": "leave_policy.txt",
+        "score": 0.5649272203445435
+      },
+      {
+        "document": "onboarding.txt",
+        "score": 0.09004856646060944
+      },
+      {
+        "document": "leave_policy.txt",
+        "score": 0.017415937036275864
+      }
+    ],
+    "response_from_llm_first_50_words": "The leave policy is as follows: * Employees are entitled to 18 days of annual leave. * Employees may apply for casual leave through the HR portal. * Leave requests should normally be submitted at least 2 working days before the requested leave date. * Emergency leave may be submitted",
+    "response": "The leave policy is as follows:\n\n* Employees are entitled to 18 days of annual leave.\n* Employees may apply for casual leave through the HR portal.\n* Leave requests should normally be submitted at least 2 working days before the requested leave date.\n* Emergency leave may be submitted after the leave has started, subject to manager approval.\n* For leave balances, employees should contact the HR Operations team."
+  },
+  {
+    "chunk_size": 500,
+    "chunk_overlap": 100,
+    "top_k": 5,
+    "user_query": "what is leave policy ?",
+    "citation_document_names_with_scores": [
+      {
+        "document": "leave_policy.txt",
+        "score": 0.5649272203445435
+      },
+      {
+        "document": "onboarding.txt",
+        "score": 0.09004856646060944
+      },
+      {
+        "document": "leave_policy.txt",
+        "score": 0.017415937036275864
+      }
+    ],
+    "response_from_llm_first_50_words": "The leave policy allows employees to take 18 days of annual leave per year.",
+    "response": "The leave policy allows employees to take 18 days of annual leave per year."
+  },
+  {
+    "chunk_size": 500,
+    "chunk_overlap": 100,
+    "top_k": 5,
+    "user_query": "what is leave policy ?",
+    "citation_document_names_with_scores": [
+      {
+        "document": "leave_policy.txt",
+        "score": 0.5649272203445435
+      },
+      {
+        "document": "onboarding.txt",
+        "score": 0.09004856646060944
+      },
+      {
+        "document": "leave_policy.txt",
+        "score": 0.017415937036275864
+      }
+    ],
+    "response_from_llm_first_50_words": "According to our company's leave policy, employees are entitled to 18 days of annual leave.",
+    "response": "According to our company's leave policy, employees are entitled to 18 days of annual leave."
+  }
+]
