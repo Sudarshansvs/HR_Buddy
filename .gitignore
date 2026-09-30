@@ -3,6 +3,8 @@ node_modules/
 venv/
 env/
 .venv/
+.claude/*
+.agents/
 __pycache__/
 # IDE
 .vscode/
@@ -39,9 +41,7 @@ coverage/
 # Misc
 *.tmp
 .cache/
-.claude/*
-.agents/
-__pycache__/
+
 
 # # Generated files
 # images/*
