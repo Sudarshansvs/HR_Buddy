@@ -1,0 +1,46 @@
+(.venv) sudarshanseshabattar@sudarshans-MacBook-Air HR_Buddy % python3 run.py
+Starting HR Buddy backend...
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Loading weights: 100%|███████████████████████████████████████████████████████████████████████████████████████████████| 103/103 [00:00<00:00, 5592.04it/s]
+Score: 0.2788807153701782
+
+    Employees are entitled to 20 days of annual leave
+    per calendar year. Leave requests must be submitted
+    through the HR portal.
+    
+Score: 0.2308107167482376
+
+    The company holiday calendar is published at the
+    beginning of each calendar year.
+    
+INFO:     Started server process [37698]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://127.0.0.1:8080 (Press CTRL+C to quit)
+INFO:     127.0.0.1:58492 - "GET /docs HTTP/1.1" 200 OK
+Starting HR Buddy frontend...
+2026-09-30 08:32:37.762 Uvicorn server started on :::8506
+
+  You can now view your Streamlit app in your browser.
+
+  Local URL: http://localhost:8506
+  Network URL: http://192.168.0.181:8506
+  External URL: http://103.124.140.171:8506
+
+  For better performance, install the Watchdog module:
+
+  $ xcode-select --install
+  $ pip install watchdog
+            
+INFO:     127.0.0.1:58512 - "POST /ask HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58529 - "POST /ask HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58535 - "POST /ask HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58551 - "POST /ask HTTP/1.1" 200 OK
+^C  Stopping...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [37698]
+
+Stopping HR Buddy...
+(.venv) sudarshanseshabattar@sudarshans-MacBook-Air HR_Buddy % 
