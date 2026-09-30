@@ -82,5 +82,41 @@
     ],
     "response_from_llm_first_50_words": "According to our company's leave policy, employees are entitled to 18 days of annual leave.",
     "response": "According to our company's leave policy, employees are entitled to 18 days of annual leave."
+  },
+  {
+    "chunk_size": 1000,
+    "chunk_overlap": 20,
+    "top_k": 2,
+    "user_query": "what are HR leave policy ?",
+    "citation_document_names_with_scores": [
+      {
+        "document": "leave_policy.txt",
+        "score": 0.6117801070213318
+      },
+      {
+        "document": "onboarding.txt",
+        "score": 0.28134647011756897
+      }
+    ],
+    "response_from_llm_first_50_words": "The company's HR leave policy is as follows: * Employees are entitled to 18 days of annual leave. * Employees may apply for casual leave through the HR portal. * Leave requests should normally be submitted at least two working days before the requested leave date. * Emergency leave may",
+    "response": "The company's HR leave policy is as follows:\n\n* Employees are entitled to 18 days of annual leave.\n* Employees may apply for casual leave through the HR portal.\n* Leave requests should normally be submitted at least two working days before the requested leave date.\n* Emergency leave may be submitted after the leave has started, subject to manager approval.\n* For questions about leave balances, employees should contact the HR Operations team."
+  },
+  {
+    "chunk_size": 2000,
+    "chunk_overlap": 40,
+    "top_k": 2,
+    "user_query": "what are HR leave policy ?",
+    "citation_document_names_with_scores": [
+      {
+        "document": "leave_policy.txt",
+        "score": 0.6117801070213318
+      },
+      {
+        "document": "onboarding.txt",
+        "score": 0.28134647011756897
+      }
+    ],
+    "response_from_llm_first_50_words": "According to our company's leave policy, employees are entitled to 18 days of annual leave.",
+    "response": "According to our company's leave policy, employees are entitled to 18 days of annual leave."
   }
 ]

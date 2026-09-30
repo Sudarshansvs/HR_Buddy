@@ -21,6 +21,17 @@ class ChatService:
             RetrievalService()
         )
 
+    def _apply_rag_config(self, rag_config: RAGConfig):
+        """Refresh the retrieval pipeline so the current request settings are used."""
+        if (
+            rag_config.chunk_size != self.retrieval.chunk_size
+            or rag_config.chunk_overlap != self.retrieval.chunk_overlap
+        ):
+            self.retrieval = RetrievalService(
+                chunk_size=rag_config.chunk_size,
+                chunk_overlap=rag_config.chunk_overlap,
+            )
+
     def ask(self, question, rag_config: RAGConfig | None = None):
 
         logger.info(
@@ -30,6 +41,8 @@ class ChatService:
         # Use provided config or defaults
         if rag_config is None:
             rag_config = RAGConfig()
+
+        self._apply_rag_config(rag_config)
 
         results = (
             self.retrieval.search(
@@ -49,8 +62,8 @@ class ChatService:
                 question=question,
                 answer=answer,
                 sources=[],
-                chunk_size=self.retrieval.chunk_size,
-                chunk_overlap=self.retrieval.chunk_overlap,
+                chunk_size=rag_config.chunk_size,
+                chunk_overlap=rag_config.chunk_overlap,
                 top_k=rag_config.top_k,
             )
             return {
@@ -91,8 +104,8 @@ class ChatService:
             question=question,
             answer=answer,
             sources=sources,
-            chunk_size=self.retrieval.chunk_size,
-            chunk_overlap=self.retrieval.chunk_overlap,
+            chunk_size=rag_config.chunk_size,
+            chunk_overlap=rag_config.chunk_overlap,
             top_k=rag_config.top_k,
         )
 
