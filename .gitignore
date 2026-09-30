@@ -50,7 +50,8 @@ vector_db/
 
 # Jupyter / notebooks
 .ipynb_checkpoints/
-
+.agents/skills/developing-with-streamlit
+.claude/skills/developing-with-streamlit
 # Generated files
 # images/
 

@@ -118,5 +118,63 @@
     ],
     "response_from_llm_first_50_words": "According to our company's leave policy, employees are entitled to 18 days of annual leave.",
     "response": "According to our company's leave policy, employees are entitled to 18 days of annual leave."
+  },
+  {
+    "chunk_size": 500,
+    "chunk_overlap": 100,
+    "top_k": 5,
+    "user_query": "what are my leave policies ?",
+    "citation_document_names_with_scores": [
+      {
+        "document": "leave_policy.txt",
+        "score": 0.5591353178024292
+      },
+      {
+        "document": "onboarding.txt",
+        "score": 0.12781323492527008
+      },
+      {
+        "document": "leave_policy.txt",
+        "score": -0.017296869307756424
+      }
+    ],
+    "response_from_llm_first_50_words": "According to our company's leave policy, employees are entitled to 18 days of annual leave. Additionally, casual leave can be applied for through the HR portal, and leave requests should normally be submitted at least two working days before the requested leave date.",
+    "response": "According to our company's leave policy, employees are entitled to 18 days of annual leave. Additionally, casual leave can be applied for through the HR portal, and leave requests should normally be submitted at least two working days before the requested leave date."
+  },
+  {
+    "chunk_size": 1600,
+    "chunk_overlap": 60,
+    "top_k": 3,
+    "user_query": "what are my leave policies ?",
+    "citation_document_names_with_scores": [
+      {
+        "document": "leave_policy.txt",
+        "score": 0.5591353178024292
+      },
+      {
+        "document": "onboarding.txt",
+        "score": 0.12781323492527008
+      }
+    ],
+    "response_from_llm_first_50_words": "Our company's leave policy is as follows: * Employees are entitled to 18 days of annual leave per year. * Casual leave may be applied through the HR portal. * Leave requests should normally be submitted at least 2 working days before the requested leave date. * Emergency leave may",
+    "response": "Our company's leave policy is as follows:\n\n* Employees are entitled to 18 days of annual leave per year.\n* Casual leave may be applied through the HR portal.\n* Leave requests should normally be submitted at least 2 working days before the requested leave date.\n* Emergency leave may be submitted after the leave has started, subject to manager approval.\n\nFor further information on leave balances, please contact the HR Operations team.\n\nSource: Leave Policy (not specified, as it is a general policy document)"
+  },
+  {
+    "chunk_size": 1900,
+    "chunk_overlap": 20,
+    "top_k": 5,
+    "user_query": "what are leave policies ?",
+    "citation_document_names_with_scores": [
+      {
+        "document": "leave_policy.txt",
+        "score": 0.5428439378738403
+      },
+      {
+        "document": "onboarding.txt",
+        "score": 0.12199854105710983
+      }
+    ],
+    "response_from_llm_first_50_words": "According to our company's policies, employees are entitled to 18 days of annual leave.",
+    "response": "According to our company's policies, employees are entitled to 18 days of annual leave."
   }
 ]
