@@ -6,6 +6,10 @@ env/
 .claude/*
 .agents/
 __pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+
 # IDE
 .vscode/
 .idea/
@@ -32,16 +36,24 @@ npm-debug.log*
 
 # OS
 Thumbs.db
-.DS_Store
 
 # Testing
 coverage/
 .pytest_cache/
 
-# Misc
+# Local data / generated outputs
+# .data/
 *.tmp
 .cache/
+vector_db/
+*.sqlite3
 
+# Jupyter / notebooks
+.ipynb_checkpoints/
 
-# # Generated files
-# images/*
+# Generated files
+# images/
+
+# Local app runtime artifacts
+run.pid
+*.pid
