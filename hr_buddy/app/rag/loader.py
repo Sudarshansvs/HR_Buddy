@@ -1,4 +1,7 @@
 from pathlib import Path
+from typing import List
+
+from pypdf import PdfReader
 
 
 class DocumentLoader:
@@ -9,21 +12,45 @@ class DocumentLoader:
             documents_path
         )
 
-    def load_documents(self):
+    def _extract_pdf_text(self, file_path: Path) -> str:
+
+        try:
+            reader = PdfReader(str(file_path))
+            pages = []
+            for p in reader.pages:
+                try:
+                    pages.append(p.extract_text() or "")
+                except Exception:
+                    pages.append("")
+            return "\n\n".join(pages)
+        except Exception:
+            return ""
+
+    def load_documents(self) -> List[dict]:
 
         documents = []
 
-        for file_path in self.documents_path.glob("*.txt"):
+        # support .txt, .md and .pdf files
+        for ext in ("*.txt", "*.md", "*.pdf"):
 
-            content = file_path.read_text(
-                encoding="utf-8"
-            )
+            for file_path in self.documents_path.glob(ext):
 
-            documents.append(
-                {
-                    "document": file_path.name,
-                    "content": content
-                }
-            )
+                if file_path.suffix.lower() == ".pdf":
+
+                    content = self._extract_pdf_text(file_path)
+
+                else:
+
+                    content = file_path.read_text(
+                        encoding="utf-8",
+                        errors="ignore"
+                    )
+
+                documents.append(
+                    {
+                        "document": file_path.name,
+                        "content": content
+                    }
+                )
 
         return documents

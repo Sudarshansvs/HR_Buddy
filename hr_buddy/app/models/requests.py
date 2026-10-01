@@ -26,6 +26,45 @@ class RAGConfig(BaseModel):
     )
 
 
+class LLMConfig(BaseModel):
+    """LLM tuning parameters"""
+
+    temperature: float = Field(
+        default=0.7,
+        ge=0.0,
+        le=2.0,
+        description="Controls randomness: 0=deterministic, 2=very random"
+    )
+
+    max_tokens: int = Field(
+        default=500,
+        ge=100,
+        le=4000,
+        description="Maximum length of the response"
+    )
+
+    top_p: float = Field(
+        default=0.9,
+        ge=0.0,
+        le=1.0,
+        description="Cumulative probability for nucleus sampling"
+    )
+
+    frequency_penalty: float = Field(
+        default=0.0,
+        ge=0.0,
+        le=2.0,
+        description="Penalizes repeated tokens"
+    )
+
+    presence_penalty: float = Field(
+        default=0.0,
+        ge=0.0,
+        le=2.0,
+        description="Penalizes tokens based on appearance"
+    )
+
+
 class ChatRequest(BaseModel):
 
     question: str = Field(
@@ -39,4 +78,15 @@ class ChatRequest(BaseModel):
     rag_config: RAGConfig | None = Field(
         default=None,
         description="Optional RAG configuration"
+    )
+
+    llm_config: LLMConfig | None = Field(
+        default=None,
+        description="Optional LLM tuning configuration"
+    )
+
+    # Optional: if provided, limit retrieval to this document only
+    document: str | None = Field(
+        default=None,
+        description="Optional document filename to restrict the search to"
     )

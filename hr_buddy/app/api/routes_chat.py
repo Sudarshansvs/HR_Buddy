@@ -22,7 +22,9 @@ def chat(request: ChatRequest):
 
     result = chat_service.ask(
         request.question,
-        rag_config=request.rag_config
+        rag_config=request.rag_config,
+        llm_config=request.llm_config,
+        document=request.document,
     )
 
     return ChatResponse(

@@ -4,7 +4,7 @@ from hr_buddy.app.services.llm_service import LLMService
 from hr_buddy.app.services.retrieval_service import (
     RetrievalService
 )
-from hr_buddy.app.models.requests import RAGConfig
+from hr_buddy.app.models.requests import RAGConfig, LLMConfig
 from hr_buddy.app.core.query_logger import save_query_response
 
 
@@ -32,7 +32,7 @@ class ChatService:
                 chunk_overlap=rag_config.chunk_overlap,
             )
 
-    def ask(self, question, rag_config: RAGConfig | None = None):
+    def ask(self, question, rag_config: RAGConfig | None = None, llm_config: LLMConfig | None = None, document: str | None = None):
 
         logger.info(
             "Processing HR question"
@@ -42,12 +42,17 @@ class ChatService:
         if rag_config is None:
             rag_config = RAGConfig()
 
+        if llm_config is None:
+            llm_config = LLMConfig()
+
         self._apply_rag_config(rag_config)
 
         results = (
             self.retrieval.search(
                 question,
-                top_k=rag_config.top_k
+                top_k=rag_config.top_k,
+                # document filter (None means search all documents)
+                document=document,
             )
         )
 
@@ -78,7 +83,12 @@ class ChatService:
 
         answer = self.llm.generate(
             question,
-            context
+            context,
+            temperature=llm_config.temperature,
+            max_tokens=llm_config.max_tokens,
+            top_p=llm_config.top_p,
+            frequency_penalty=llm_config.frequency_penalty,
+            presence_penalty=llm_config.presence_penalty
         )
 
         sources = []

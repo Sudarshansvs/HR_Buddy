@@ -33,7 +33,8 @@ class Retriever:
     def retrieve(
         self,
         question,
-        top_k=5
+        top_k=5,
+        document: str | None = None
     ):
 
         embedding = (
@@ -42,7 +43,32 @@ class Retriever:
             )[0]
         )
 
-        return self.vector_store.search(
+        results = self.vector_store.search(
             embedding,
             top_k
+        )
+
+        if document:
+
+            # Filter results to only include chunks coming from the specified document
+            results = [r for r in results if r.get("document") == document]
+
+        return results
+
+    def add_embeddings(self, texts, documents):
+        """Incrementally add new text chunks with their metadata.
+
+        texts: list of strings to embed
+        documents: list of metadata dicts (should match len(texts))
+        """
+        if not texts:
+            return
+
+        embeddings = (
+            self.embedding_service.embed(texts)
+        )
+
+        self.vector_store.add(
+            embeddings,
+            documents
         )
