@@ -59,4 +59,4 @@ vector_db/
 run.pid
 *.pid
 # Long-term memory (contains employee personal details)
-data/memory/
+# data/memory/

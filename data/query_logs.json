@@ -802,5 +802,59 @@
     ],
     "response_from_llm_first_50_words": "FAKE_ANSWER: What is the vacation policy?",
     "response": "FAKE_ANSWER: What is the vacation policy?"
+  },
+  {
+    "chunk_size": 500,
+    "chunk_overlap": 100,
+    "top_k": 5,
+    "user_query": "what are you ?",
+    "citation_document_names_with_scores": [],
+    "response_from_llm_first_50_words": "I'm HR Buddy, an internal HR assistant here to help you with any HR-related questions or concerns. I'm here to provide information, answer your queries, and guide you through our company's HR processes.",
+    "response": "I'm HR Buddy, an internal HR assistant here to help you with any HR-related questions or concerns. I'm here to provide information, answer your queries, and guide you through our company's HR processes."
+  },
+  {
+    "chunk_size": 500,
+    "chunk_overlap": 100,
+    "top_k": 5,
+    "user_query": "My name is Sudarshan , and my age is 123432",
+    "citation_document_names_with_scores": [],
+    "response_from_llm_first_50_words": "I've updated my records with the new information about you, Sudarshan. I'll make sure to keep this in mind for our future conversations.",
+    "response": "I've updated my records with the new information about you, Sudarshan. I'll make sure to keep this in mind for our future conversations."
+  },
+  {
+    "chunk_size": 500,
+    "chunk_overlap": 100,
+    "top_k": 5,
+    "user_query": "what is my age ?",
+    "citation_document_names_with_scores": [],
+    "response_from_llm_first_50_words": "You're 123432 years old, Sudarshan.",
+    "response": "You're 123432 years old, Sudarshan."
+  },
+  {
+    "chunk_size": 500,
+    "chunk_overlap": 100,
+    "top_k": 5,
+    "user_query": "I want to apply leave on 20th October 2026 ",
+    "citation_document_names_with_scores": [],
+    "response_from_llm_first_50_words": "Sure, I can apply for leave. Please tell me which type of leave (annual, casual or sick).",
+    "response": "Sure, I can apply for leave. Please tell me which type of leave (annual, casual or sick)."
+  },
+  {
+    "chunk_size": 500,
+    "chunk_overlap": 100,
+    "top_k": 5,
+    "user_query": "Sick",
+    "citation_document_names_with_scores": [],
+    "response_from_llm_first_50_words": "Here's the leave request. Please check the dates and confirm.",
+    "response": "Here's the leave request. Please check the dates and confirm."
+  },
+  {
+    "chunk_size": 500,
+    "chunk_overlap": 100,
+    "top_k": 5,
+    "user_query": "which days am I taking leaves ",
+    "citation_document_names_with_scores": [],
+    "response_from_llm_first_50_words": "Your leave balance for 2026: | Type | Entitled | Used | Pending | Available | |---|---|---|---|---| | Annual | 18 | 0 | 6 | **12** | | Casual | 6 | 0 | 0 | **6** | | Sick | 6 | 1 | 1 | **4** |",
+    "response": "Your leave balance for 2026:\n\n| Type | Entitled | Used | Pending | Available |\n|---|---|---|---|---|\n| Annual | 18 | 0 | 6 | **12** |\n| Casual | 6 | 0 | 0 | **6** |\n| Sick | 6 | 1 | 1 | **4** |"
   }
 ]
