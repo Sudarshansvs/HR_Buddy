@@ -3,7 +3,7 @@
 HR Buddy is an HR knowledge assistant built with a FastAPI backend, Streamlit frontend, and a local retrieval-augmented generation (RAG) pipeline powered by Ollama and sentence embeddings.
 
 It helps employees ask HR questions such as leave policies, onboarding guidance, and internal procedures using the documents stored in the project data folder.
-
+demo :  https://www.youtube.com/watch?v=qAEcApqlN6M
 ## Features
 
 - Streamlit UI for chat-based HR Q&A
