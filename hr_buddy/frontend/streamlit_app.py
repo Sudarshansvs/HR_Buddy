@@ -33,6 +33,7 @@ pages = [st.Page("app_pages/chat.py", title="Chat", icon=":material/chat:", defa
 
 if user["is_manager"]:
     pages.append(st.Page("app_pages/approvals.py", title="Approvals", icon=":material/fact_check:"))
+    pages.append(st.Page("app_pages/team_calendar.py", title="Team calendar", icon=":material/calendar_month:"))
 
 if user["role"] == "admin":
     pages.append(st.Page("app_pages/admin.py", title="Admin", icon=":material/admin_panel_settings:"))

@@ -132,3 +132,24 @@ def manager_team(user: dict = Depends(require_manager)):
         "pending": pending,
         "recent_decisions": decided[:20]
     }
+
+
+@router.get("/team/calendar")
+def team_calendar(start: date, end: date, user: dict = Depends(require_manager)):
+    """Approved and pending leave from the manager's direct reports that touches start..end."""
+
+    if end < start:
+        raise HTTPException(status_code=400, detail="The end date is before the start date.")
+
+    leaves = [
+        r for r in get_hr_system().team_requests(user["id"])
+        if r["status"] in ("approved", "pending")
+        and r["start_date"] <= end.isoformat()
+        and r["end_date"] >= start.isoformat()
+    ]
+    leaves.sort(key=lambda r: r["start_date"])
+
+    return {
+        "team_size": get_hr_system().team_size(user["id"]),
+        "leaves": leaves
+    }

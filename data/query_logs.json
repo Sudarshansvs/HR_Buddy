@@ -788,5 +788,19 @@
     "citation_document_names_with_scores": [],
     "response_from_llm_first_50_words": "I'll raise this with HR Operations. Please confirm.",
     "response": "I'll raise this with HR Operations. Please confirm."
+  },
+  {
+    "chunk_size": 500,
+    "chunk_overlap": 100,
+    "top_k": 5,
+    "user_query": "What is the vacation policy?",
+    "citation_document_names_with_scores": [
+      {
+        "document": "test_doc.txt",
+        "score": 15680.0
+      }
+    ],
+    "response_from_llm_first_50_words": "FAKE_ANSWER: What is the vacation policy?",
+    "response": "FAKE_ANSWER: What is the vacation policy?"
   }
 ]
