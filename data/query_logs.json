@@ -24,5 +24,769 @@
     ],
     "response_from_llm_first_50_words": "I am an HR Buddy, an internal HR assistant. I am here to answer your HR-related questions and provide information based on our company's policies and procedures.",
     "response": "I am an HR Buddy, an internal HR assistant. I am here to answer your HR-related questions and provide information based on our company's policies and procedures."
+  },
+  {
+    "chunk_size": 500,
+    "chunk_overlap": 100,
+    "top_k": 5,
+    "user_query": "what are HR policies on leaves ?",
+    "citation_document_names_with_scores": [
+      {
+        "document": "test_doc.txt",
+        "score": 0.4886813163757324
+      },
+      {
+        "document": "leave_policy.txt",
+        "score": 0.43565303087234497
+      },
+      {
+        "document": "onboarding.txt",
+        "score": 0.2892502546310425
+      },
+      {
+        "document": "leave_policy.txt",
+        "score": -0.0013164789415895939
+      }
+    ],
+    "response_from_llm_first_50_words": "The HR policies on leaves are as follows: * Employees are entitled to 18 days of annual leave. * Employees may apply for casual leave through the HR portal. * Leave requests should normally be submitted at least two working days before the requested leave date. * Emergency leave may",
+    "response": "The HR policies on leaves are as follows:\n\n* Employees are entitled to 18 days of annual leave.\n* Employees may apply for casual leave through the HR portal.\n* Leave requests should normally be submitted at least two working days before the requested leave date.\n* Emergency leave may be submitted after the leave has started, subject to manager approval.\n* For questions about leave balances, employees should contact the HR Operations team."
+  },
+  {
+    "chunk_size": 500,
+    "chunk_overlap": 100,
+    "top_k": 5,
+    "user_query": "what are you ?",
+    "citation_document_names_with_scores": [
+      {
+        "document": "leave_policy.txt",
+        "score": 0.1939692199230194
+      },
+      {
+        "document": "test_doc.txt",
+        "score": 0.036764249205589294
+      },
+      {
+        "document": "leave_policy.txt",
+        "score": -0.10022740066051483
+      },
+      {
+        "document": "onboarding.txt",
+        "score": -0.1465490162372589
+      }
+    ],
+    "response_from_llm_first_50_words": "I am an HR Buddy, an internal HR assistant. My role is to answer employee HR questions and provide information on company policies and procedures.",
+    "response": "I am an HR Buddy, an internal HR assistant. My role is to answer employee HR questions and provide information on company policies and procedures."
+  },
+  {
+    "chunk_size": 500,
+    "chunk_overlap": 100,
+    "top_k": 5,
+    "user_query": "Hi ",
+    "citation_document_names_with_scores": [
+      {
+        "document": "leave_policy.txt",
+        "score": 0.18308401107788086
+      },
+      {
+        "document": "test_doc.txt",
+        "score": 0.07011719048023224
+      },
+      {
+        "document": "onboarding.txt",
+        "score": 0.06634259223937988
+      },
+      {
+        "document": "leave_policy.txt",
+        "score": -0.01668025553226471
+      }
+    ],
+    "response_from_llm_first_50_words": "Hello! I'd be happy to help you with your HR question. Unfortunately, I don't have any information about you, the employee, in our system. Could you please provide more context or details about your question? I'll do my best to assist you based on the available information and company policies.",
+    "response": "Hello! I'd be happy to help you with your HR question. Unfortunately, I don't have any information about you, the employee, in our system. Could you please provide more context or details about your question? I'll do my best to assist you based on the available information and company policies."
+  },
+  {
+    "chunk_size": 500,
+    "chunk_overlap": 100,
+    "top_k": 5,
+    "user_query": "I am sudarshan ",
+    "citation_document_names_with_scores": [
+      {
+        "document": "onboarding.txt",
+        "score": 0.10532727837562561
+      },
+      {
+        "document": "leave_policy.txt",
+        "score": 0.1012292355298996
+      },
+      {
+        "document": "leave_policy.txt",
+        "score": -0.016910381615161896
+      },
+      {
+        "document": "test_doc.txt",
+        "score": -0.024274714291095734
+      }
+    ],
+    "response_from_llm_first_50_words": "Hello Sudarshan, I'm happy to help you with your onboarding process and any questions you may have. Since we just started our conversation, let's begin with the basics. You're a new employee, and we'll guide you through the onboarding process. Can you please tell me which documents or information you",
+    "response": "Hello Sudarshan,\n\nI'm happy to help you with your onboarding process and any questions you may have. Since we just started our conversation, let's begin with the basics. You're a new employee, and we'll guide you through the onboarding process.\n\nCan you please tell me which documents or information you need help with (e.g., identity documents, bank information, employment documents)?"
+  },
+  {
+    "chunk_size": 500,
+    "chunk_overlap": 100,
+    "top_k": 5,
+    "user_query": "what am I ?",
+    "citation_document_names_with_scores": [
+      {
+        "document": "leave_policy.txt",
+        "score": 0.18969890475273132
+      },
+      {
+        "document": "onboarding.txt",
+        "score": -0.009818685241043568
+      },
+      {
+        "document": "test_doc.txt",
+        "score": -0.08397004008293152
+      },
+      {
+        "document": "leave_policy.txt",
+        "score": -0.14216288924217224
+      }
+    ],
+    "response_from_llm_first_50_words": "You are a new employee in the team, currently going through the onboarding process.",
+    "response": "You are a new employee in the team, currently going through the onboarding process."
+  },
+  {
+    "chunk_size": 500,
+    "chunk_overlap": 100,
+    "top_k": 5,
+    "user_query": "what is my name ",
+    "citation_document_names_with_scores": [
+      {
+        "document": "leave_policy.txt",
+        "score": 0.19537076354026794
+      },
+      {
+        "document": "onboarding.txt",
+        "score": -0.06395868957042694
+      },
+      {
+        "document": "test_doc.txt",
+        "score": -0.08329794555902481
+      },
+      {
+        "document": "leave_policy.txt",
+        "score": -0.1404234617948532
+      }
+    ],
+    "response_from_llm_first_50_words": "I'm happy to help you with your question, Sudarshan. Unfortunately, I don't have any information about your personal details, including your name. As a new employee, I don't have access to your personal data. Can you please provide me with your name, or would you like me to guide you",
+    "response": "I'm happy to help you with your question, Sudarshan.\n\nUnfortunately, I don't have any information about your personal details, including your name. As a new employee, I don't have access to your personal data. Can you please provide me with your name, or would you like me to guide you on how to share this information with me?"
+  },
+  {
+    "chunk_size": 500,
+    "chunk_overlap": 100,
+    "top_k": 5,
+    "user_query": "what re you ?",
+    "citation_document_names_with_scores": [
+      {
+        "document": "leave_policy.txt",
+        "score": 0.22066587209701538
+      },
+      {
+        "document": "test_doc.txt",
+        "score": 0.05678462237119675
+      },
+      {
+        "document": "leave_policy.txt",
+        "score": -0.06766358017921448
+      },
+      {
+        "document": "onboarding.txt",
+        "score": -0.08104518055915833
+      }
+    ],
+    "response_from_llm_first_50_words": "I don't know who you are, as we haven't had a previous conversation about you. You mentioned earlier that you are an HR Buddy, an internal HR assistant, but I don't have any information about your role or identity.",
+    "response": "I don't know who you are, as we haven't had a previous conversation about you. You mentioned earlier that you are an HR Buddy, an internal HR assistant, but I don't have any information about your role or identity."
+  },
+  {
+    "chunk_size": 500,
+    "chunk_overlap": 100,
+    "top_k": 5,
+    "user_query": "what are you ?",
+    "citation_document_names_with_scores": [
+      {
+        "document": "leave_policy.txt",
+        "score": 0.23259089887142181
+      },
+      {
+        "document": "test_doc.txt",
+        "score": 0.04656272381544113
+      },
+      {
+        "document": "leave_policy.txt",
+        "score": -0.08730396628379822
+      },
+      {
+        "document": "onboarding.txt",
+        "score": -0.09553922712802887
+      }
+    ],
+    "response_from_llm_first_50_words": "I don't know who you are, as we haven't had a previous conversation about you. You mentioned earlier that you are an HR Buddy, an internal HR assistant, but I don't have any information about your role or identity, beyond what you told me about yourself.",
+    "response": "I don't know who you are, as we haven't had a previous conversation about you. You mentioned earlier that you are an HR Buddy, an internal HR assistant, but I don't have any information about your role or identity, beyond what you told me about yourself."
+  },
+  {
+    "chunk_size": 500,
+    "chunk_overlap": 100,
+    "top_k": 5,
+    "user_query": "I am Sudarshan ",
+    "citation_document_names_with_scores": [
+      {
+        "document": "leave_policy.txt",
+        "score": 0.1856820285320282
+      },
+      {
+        "document": "onboarding.txt",
+        "score": -0.0068082548677921295
+      },
+      {
+        "document": "test_doc.txt",
+        "score": -0.04690273478627205
+      },
+      {
+        "document": "leave_policy.txt",
+        "score": -0.07645784318447113
+      }
+    ],
+    "response_from_llm_first_50_words": "Hello Sudarshan! I don't know your role or team, as we haven't discussed that earlier. However, I can provide information about our company's policies and procedures. As an employee, you can reach out to me, HR Buddy, for general HR-related queries. For specific questions about onboarding, leave, or any other",
+    "response": "Hello Sudarshan!\n\nI don't know your role or team, as we haven't discussed that earlier. However, I can provide information about our company's policies and procedures.\n\nAs an employee, you can reach out to me, HR Buddy, for general HR-related queries. For specific questions about onboarding, leave, or any other policy-related matters, you can contact the HR Operations team.\n\nIf you have any questions about our company's policies or procedures, feel free to ask, and I'll do my best to assist you."
+  },
+  {
+    "chunk_size": 500,
+    "chunk_overlap": 100,
+    "top_k": 5,
+    "user_query": "I work in VOIS ",
+    "citation_document_names_with_scores": [
+      {
+        "document": "onboarding.txt",
+        "score": 0.1658041775226593
+      },
+      {
+        "document": "leave_policy.txt",
+        "score": 0.1524553745985031
+      },
+      {
+        "document": "leave_policy.txt",
+        "score": 0.030186083167791367
+      },
+      {
+        "document": "test_doc.txt",
+        "score": 0.0246218703687191
+      }
+    ],
+    "response_from_llm_first_50_words": "Hello Sudarshan! I don't know your team, as we haven't discussed that earlier. However, I can provide information about our company's policies and procedures. Since you mentioned you work in VOIS, I assume you are referring to the VOIS department or team. However, I don't have any additional information about",
+    "response": "Hello Sudarshan!\n\nI don't know your team, as we haven't discussed that earlier. However, I can provide information about our company's policies and procedures.\n\nSince you mentioned you work in VOIS, I assume you are referring to the VOIS department or team. However, I don't have any additional information about your specific role or team within VOIS.\n\nIf you have any questions about our company's policies or procedures, feel free to ask, and I'll do my best to assist you."
+  },
+  {
+    "chunk_size": 500,
+    "chunk_overlap": 100,
+    "top_k": 5,
+    "user_query": "my emp id is 1234567",
+    "citation_document_names_with_scores": [
+      {
+        "document": "onboarding.txt",
+        "score": 0.24973058700561523
+      },
+      {
+        "document": "leave_policy.txt",
+        "score": 0.1423887461423874
+      },
+      {
+        "document": "leave_policy.txt",
+        "score": 0.1211828887462616
+      },
+      {
+        "document": "test_doc.txt",
+        "score": 0.07594586163759232
+      }
+    ],
+    "response_from_llm_first_50_words": "Hello Sudarshan! I don't know your role or team, as we haven't discussed that earlier. However, I can provide information about our company's policies and procedures. As an employee, you can reach out to me, HR Buddy, for general HR-related queries. For specific questions about onboarding, leave, or any other",
+    "response": "Hello Sudarshan!\n\nI don't know your role or team, as we haven't discussed that earlier. However, I can provide information about our company's policies and procedures.\n\nAs an employee, you can reach out to me, HR Buddy, for general HR-related queries. For specific questions about onboarding, leave, or any other policy-related matters, you can contact the HR Operations team.\n\nRegarding your question about your employee ID being 1234567, I don't have any information about your specific employee ID or any associated details. Can you please clarify which policy or procedure you are referring to? I'll do my best to assist you."
+  },
+  {
+    "chunk_size": 500,
+    "chunk_overlap": 100,
+    "top_k": 5,
+    "user_query": "my role is SDE",
+    "citation_document_names_with_scores": [
+      {
+        "document": "onboarding.txt",
+        "score": 0.3205631673336029
+      },
+      {
+        "document": "leave_policy.txt",
+        "score": 0.20909805595874786
+      },
+      {
+        "document": "leave_policy.txt",
+        "score": 0.156219020485878
+      },
+      {
+        "document": "test_doc.txt",
+        "score": 0.07395674288272858
+      }
+    ],
+    "response_from_llm_first_50_words": "Hello Sudarshan! As you mentioned earlier, you work in VOIS, but I don't have any specific information about your role within VOIS. However, I can provide information about our company's policies and procedures. Since you mentioned you are an SDE, I assume you are referring to a Software Development Engineer.",
+    "response": "Hello Sudarshan!\n\nAs you mentioned earlier, you work in VOIS, but I don't have any specific information about your role within VOIS. However, I can provide information about our company's policies and procedures.\n\nSince you mentioned you are an SDE, I assume you are referring to a Software Development Engineer. If you have any questions about our company's policies or procedures, feel free to ask, and I'll do my best to assist you.\n\nFor general HR-related queries, you can reach out to me, HR Buddy, or contact the HR Operations team for specific questions about onboarding, leave, or any other policy-related matters."
+  },
+  {
+    "chunk_size": 500,
+    "chunk_overlap": 100,
+    "top_k": 5,
+    "user_query": "can you give me your role and responsibilities ",
+    "citation_document_names_with_scores": [
+      {
+        "document": "onboarding.txt",
+        "score": 0.2878998816013336
+      },
+      {
+        "document": "leave_policy.txt",
+        "score": 0.19566169381141663
+      },
+      {
+        "document": "leave_policy.txt",
+        "score": 0.11473405361175537
+      },
+      {
+        "document": "test_doc.txt",
+        "score": 0.08415091037750244
+      }
+    ],
+    "response_from_llm_first_50_words": "As HR Buddy, I can tell you that I am an internal HR assistant, but I don't have a specific role or responsibilities defined in our HR knowledge base. However, I can provide information about our company's policies and procedures. If you have any questions about our company's policies or",
+    "response": "As HR Buddy, I can tell you that I am an internal HR assistant, but I don't have a specific role or responsibilities defined in our HR knowledge base. However, I can provide information about our company's policies and procedures.\n\nIf you have any questions about our company's policies or procedures, feel free to ask, and I'll do my best to assist you."
+  },
+  {
+    "chunk_size": 500,
+    "chunk_overlap": 100,
+    "top_k": 5,
+    "user_query": "what are you ?",
+    "citation_document_names_with_scores": [],
+    "response_from_llm_first_50_words": "I'm HR Buddy, your internal HR assistant. I help answer questions and provide information about company policies and procedures.",
+    "response": "I'm HR Buddy, your internal HR assistant. I help answer questions and provide information about company policies and procedures."
+  },
+  {
+    "chunk_size": 500,
+    "chunk_overlap": 100,
+    "top_k": 5,
+    "user_query": "I am sudarshan I have 5 years of experience working with AI , gen AI , \nand I work at Vodafone in VOIS at Pune",
+    "citation_document_names_with_scores": [],
+    "response_from_llm_first_50_words": "Nice to meet you, Sudarshan! I'll make sure to remember that you have 5 years of experience working with AI, gen AI, and you're currently working at Vodafone in VOIS at Pune.",
+    "response": "Nice to meet you, Sudarshan! I'll make sure to remember that you have 5 years of experience working with AI, gen AI, and you're currently working at Vodafone in VOIS at Pune."
+  },
+  {
+    "chunk_size": 500,
+    "chunk_overlap": 100,
+    "top_k": 5,
+    "user_query": "can you give me brief of me ?",
+    "citation_document_names_with_scores": [],
+    "response_from_llm_first_50_words": "I don't know much about you yet, Sudarshan. I'll make sure to remember that you have 5 years of experience working with AI, gen AI, and you're currently working at Vodafone in VOIS at Pune. I'll keep that in mind for our future conversations.",
+    "response": "I don't know much about you yet, Sudarshan. I'll make sure to remember that you have 5 years of experience working with AI, gen AI, and you're currently working at Vodafone in VOIS at Pune. I'll keep that in mind for our future conversations."
+  },
+  {
+    "chunk_size": 500,
+    "chunk_overlap": 100,
+    "top_k": 5,
+    "user_query": "My wife is expecting a baby in December, what",
+    "citation_document_names_with_scores": [],
+    "response_from_llm_first_50_words": "I'm glad you shared that news with me, Sudarshan! I'll make sure to remember that you're expecting a baby in December.",
+    "response": "I'm glad you shared that news with me, Sudarshan! I'll make sure to remember that you're expecting a baby in December."
+  },
+  {
+    "chunk_size": 500,
+    "chunk_overlap": 100,
+    "top_k": 5,
+    "user_query": "what is my emo id",
+    "citation_document_names_with_scores": [],
+    "response_from_llm_first_50_words": "I don't know your email address yet, Sudarshan. I'll make sure to remember it for our future conversations.",
+    "response": "I don't know your email address yet, Sudarshan. I'll make sure to remember it for our future conversations."
+  },
+  {
+    "chunk_size": 500,
+    "chunk_overlap": 100,
+    "top_k": 5,
+    "user_query": "what is my EMP ID",
+    "citation_document_names_with_scores": [
+      {
+        "document": "onboarding.txt",
+        "score": 0.17373883724212646
+      },
+      {
+        "document": "leave_policy.txt",
+        "score": 0.1607881635427475
+      },
+      {
+        "document": "leave_policy.txt",
+        "score": 0.05301110818982124
+      },
+      {
+        "document": "test_doc.txt",
+        "score": 0.04920843988656998
+      }
+    ],
+    "response_from_llm_first_50_words": "I don't know your email address (EMP ID) yet, Sudarshan.",
+    "response": "I don't know your email address (EMP ID) yet, Sudarshan."
+  },
+  {
+    "chunk_size": 500,
+    "chunk_overlap": 100,
+    "top_k": 5,
+    "user_query": "my Employee ID",
+    "citation_document_names_with_scores": [],
+    "response_from_llm_first_50_words": "I don't know your Employee ID yet, Sudarshan.",
+    "response": "I don't know your Employee ID yet, Sudarshan."
+  },
+  {
+    "chunk_size": 500,
+    "chunk_overlap": 100,
+    "top_k": 5,
+    "user_query": "what am I ?",
+    "citation_document_names_with_scores": [],
+    "response_from_llm_first_50_words": "You are I, your internal HR Buddy, here to help answer your HR-related questions and provide guidance on company policies and procedures. I'll do my best to assist you!",
+    "response": "You are I, your internal HR Buddy, here to help answer your HR-related questions and provide guidance on company policies and procedures. I'll do my best to assist you!"
+  },
+  {
+    "chunk_size": 500,
+    "chunk_overlap": 100,
+    "top_k": 5,
+    "user_query": "what are you ?",
+    "citation_document_names_with_scores": [],
+    "response_from_llm_first_50_words": "I'm an internal HR assistant, here to help answer your HR-related questions and provide information about company policies and procedures.",
+    "response": "I'm an internal HR assistant, here to help answer your HR-related questions and provide information about company policies and procedures."
+  },
+  {
+    "chunk_size": 500,
+    "chunk_overlap": 100,
+    "top_k": 5,
+    "user_query": "what am I ?",
+    "citation_document_names_with_scores": [],
+    "response_from_llm_first_50_words": "You are an employee of our company, and based on the information I have, I don't know any specific details about your background, interests, or skills beyond your role and responsibilities.",
+    "response": "You are an employee of our company, and based on the information I have, I don't know any specific details about your background, interests, or skills beyond your role and responsibilities."
+  },
+  {
+    "chunk_size": 500,
+    "chunk_overlap": 100,
+    "top_k": 5,
+    "user_query": "I am Sudarshan, I have  5years of experience  in python genAI , and Agentic AI .  I work at VOIS ",
+    "citation_document_names_with_scores": [],
+    "response_from_llm_first_50_words": "Nice to meet you, Sudarshan! I've got you down in our records now. I recall that you have 5 years of experience in python genAI and Agentic AI, and you currently work at VOIS.",
+    "response": "Nice to meet you, Sudarshan! I've got you down in our records now. I recall that you have 5 years of experience in python genAI and Agentic AI, and you currently work at VOIS."
+  },
+  {
+    "chunk_size": 500,
+    "chunk_overlap": 100,
+    "top_k": 5,
+    "user_query": "what am I ?",
+    "citation_document_names_with_scores": [],
+    "response_from_llm_first_50_words": "You are Sudarshan, an employee of VOIS with 5 years of experience in python genAI and Agentic AI, and we've had this conversation before about your background and role.",
+    "response": "You are Sudarshan, an employee of VOIS with 5 years of experience in python genAI and Agentic AI, and we've had this conversation before about your background and role."
+  },
+  {
+    "chunk_size": 500,
+    "chunk_overlap": 100,
+    "top_k": 5,
+    "user_query": "I have planned leave on 14th oct ",
+    "citation_document_names_with_scores": [
+      {
+        "document": "leave_policy.txt",
+        "score": 0.32193291187286377
+      },
+      {
+        "document": "test_doc.txt",
+        "score": 0.32043614983558655
+      },
+      {
+        "document": "leave_policy.txt",
+        "score": 0.07976231724023819
+      },
+      {
+        "document": "onboarding.txt",
+        "score": 0.004286881536245346
+      }
+    ],
+    "response_from_llm_first_50_words": "You've planned leave on October 14th. According to our leave policy, leave requests should normally be submitted at least two working days before the requested leave date. Since October 14th is a Saturday, you should submit your leave request on or before October 10th to meet this requirement.",
+    "response": "You've planned leave on October 14th. \n\nAccording to our leave policy, leave requests should normally be submitted at least two working days before the requested leave date. Since October 14th is a Saturday, you should submit your leave request on or before October 10th to meet this requirement."
+  },
+  {
+    "chunk_size": 500,
+    "chunk_overlap": 100,
+    "top_k": 5,
+    "user_query": "when am I taking a leave ?",
+    "citation_document_names_with_scores": [
+      {
+        "document": "leave_policy.txt",
+        "score": 0.44911932945251465
+      },
+      {
+        "document": "test_doc.txt",
+        "score": 0.3935772776603699
+      },
+      {
+        "document": "onboarding.txt",
+        "score": 0.03346577659249306
+      },
+      {
+        "document": "leave_policy.txt",
+        "score": 0.004682420752942562
+      }
+    ],
+    "response_from_llm_first_50_words": "You are taking a leave on October 14th.",
+    "response": "You are taking a leave on October 14th."
+  },
+  {
+    "chunk_size": 500,
+    "chunk_overlap": 100,
+    "top_k": 5,
+    "user_query": "what am I ?",
+    "citation_document_names_with_scores": [],
+    "response_from_llm_first_50_words": "You are an employee of VOIS, with 5 years of experience in python genAI and Agentic AI.",
+    "response": "You are an employee of VOIS, with 5 years of experience in python genAI and Agentic AI."
+  },
+  {
+    "chunk_size": 500,
+    "chunk_overlap": 100,
+    "top_k": 5,
+    "user_query": "what is my name ",
+    "citation_document_names_with_scores": [],
+    "response_from_llm_first_50_words": "You are Sudarshan, an employee of VOIS with 5 years of experience in python genAI and Agentic AI.",
+    "response": "You are Sudarshan, an employee of VOIS with 5 years of experience in python genAI and Agentic AI."
+  },
+  {
+    "chunk_size": 500,
+    "chunk_overlap": 100,
+    "top_k": 5,
+    "user_query": "when am I taking a leave ?",
+    "citation_document_names_with_scores": [
+      {
+        "document": "leave_policy.txt",
+        "score": 0.37578779458999634
+      },
+      {
+        "document": "test_doc.txt",
+        "score": 0.28085029125213623
+      },
+      {
+        "document": "onboarding.txt",
+        "score": 0.11211765557527542
+      },
+      {
+        "document": "leave_policy.txt",
+        "score": 0.09225534647703171
+      }
+    ],
+    "response_from_llm_first_50_words": "You are taking a leave on 14th October.",
+    "response": "You are taking a leave on 14th October."
+  },
+  {
+    "chunk_size": 500,
+    "chunk_overlap": 100,
+    "top_k": 5,
+    "user_query": "I want to take a leave o 7th Oct 2026 ",
+    "citation_document_names_with_scores": [],
+    "response_from_llm_first_50_words": "Sure, I can apply for leave. Please tell me which type of leave (annual, casual or sick).",
+    "response": "Sure, I can apply for leave. Please tell me which type of leave (annual, casual or sick)."
+  },
+  {
+    "chunk_size": 500,
+    "chunk_overlap": 100,
+    "top_k": 5,
+    "user_query": "Casual",
+    "citation_document_names_with_scores": [],
+    "response_from_llm_first_50_words": "Here's the leave request. Please check the dates and confirm.",
+    "response": "Here's the leave request. Please check the dates and confirm."
+  },
+  {
+    "chunk_size": 500,
+    "chunk_overlap": 100,
+    "top_k": 5,
+    "user_query": "how to check the request ?",
+    "citation_document_names_with_scores": [
+      {
+        "document": "onboarding.txt",
+        "score": 0.14312580227851868
+      },
+      {
+        "document": "test_doc.txt",
+        "score": 0.1188732236623764
+      },
+      {
+        "document": "leave_policy.txt",
+        "score": 0.0937073677778244
+      },
+      {
+        "document": "leave_policy.txt",
+        "score": 0.031131967902183533
+      }
+    ],
+    "response_from_llm_first_50_words": "According to the Leave Policy, leave requests should normally be submitted at least two working days before the requested leave date. You can check the status of your leave request by logging into the HR portal and checking the leave request history.",
+    "response": "According to the Leave Policy, leave requests should normally be submitted at least two working days before the requested leave date. You can check the status of your leave request by logging into the HR portal and checking the leave request history."
+  },
+  {
+    "chunk_size": 500,
+    "chunk_overlap": 100,
+    "top_k": 5,
+    "user_query": "is my leave approved ?",
+    "citation_document_names_with_scores": [],
+    "response_from_llm_first_50_words": "**Leave requests** | ID | Type | Dates | Days | Status | |---|---|---|---|---| | LR-3 | Casual | Wed 07 Oct 2026 | 1 | 🟡 pending |",
+    "response": "**Leave requests**\n\n| ID | Type | Dates | Days | Status |\n|---|---|---|---|---|\n| LR-3 | Casual | Wed 07 Oct 2026 | 1 | 🟡 pending |"
+  },
+  {
+    "chunk_size": 500,
+    "chunk_overlap": 100,
+    "top_k": 5,
+    "user_query": "I want to apply a sick leave today ",
+    "citation_document_names_with_scores": [],
+    "response_from_llm_first_50_words": "Here's the leave request. Please check the dates and confirm.",
+    "response": "Here's the leave request. Please check the dates and confirm."
+  },
+  {
+    "chunk_size": 500,
+    "chunk_overlap": 100,
+    "top_k": 5,
+    "user_query": "is my request approved ?",
+    "citation_document_names_with_scores": [],
+    "response_from_llm_first_50_words": "**Leave requests** | ID | Type | Dates | Days | Status | |---|---|---|---|---| | LR-1 | Annual | Thu 15 Oct → Mon 19 Oct 2026 | 3 | 🔴 rejected | | LR-4 | Sick | Mon 05 Oct 2026 | 1 | 🟢 approved |",
+    "response": "**Leave requests**\n\n| ID | Type | Dates | Days | Status |\n|---|---|---|---|---|\n| LR-1 | Annual | Thu 15 Oct → Mon 19 Oct 2026 | 3 | 🔴 rejected |\n| LR-4 | Sick | Mon 05 Oct 2026 | 1 | 🟢 approved |"
+  },
+  {
+    "chunk_size": 500,
+    "chunk_overlap": 100,
+    "top_k": 5,
+    "user_query": "what am I ?",
+    "citation_document_names_with_scores": [],
+    "response_from_llm_first_50_words": "You are an employee of our company, and I can tell you that you're part of our team. I don't have any information about your personal background or details, though.",
+    "response": "You are an employee of our company, and I can tell you that you're part of our team. I don't have any information about your personal background or details, though."
+  },
+  {
+    "chunk_size": 500,
+    "chunk_overlap": 100,
+    "top_k": 5,
+    "user_query": "my employee id ?",
+    "citation_document_names_with_scores": [],
+    "response_from_llm_first_50_words": "I don't have any information about your employee ID yet. I can tell you that you're an employee of our company, and I can provide general information about our company's HR processes if you need it.",
+    "response": "I don't have any information about your employee ID yet. I can tell you that you're an employee of our company, and I can provide general information about our company's HR processes if you need it."
+  },
+  {
+    "chunk_size": 500,
+    "chunk_overlap": 100,
+    "top_k": 5,
+    "user_query": "what is my name ?",
+    "citation_document_names_with_scores": [],
+    "response_from_llm_first_50_words": "I don't have any information about your name yet. You are an employee of our company, and I can tell you that you're part of our team, but I don't have any details about your personal background or contact information.",
+    "response": "I don't have any information about your name yet. You are an employee of our company, and I can tell you that you're part of our team, but I don't have any details about your personal background or contact information."
+  },
+  {
+    "chunk_size": 500,
+    "chunk_overlap": 100,
+    "top_k": 5,
+    "user_query": "my name is Rahul ",
+    "citation_document_names_with_scores": [],
+    "response_from_llm_first_50_words": "Nice to know that my information about you, Rahul, is up to date.",
+    "response": "Nice to know that my information about you, Rahul, is up to date."
+  },
+  {
+    "chunk_size": 500,
+    "chunk_overlap": 100,
+    "top_k": 5,
+    "user_query": "my emp id is Employee@123",
+    "citation_document_names_with_scores": [],
+    "response_from_llm_first_50_words": "I've taken note of your new employee ID, Employee@123.",
+    "response": "I've taken note of your new employee ID, Employee@123."
+  },
+  {
+    "chunk_size": 500,
+    "chunk_overlap": 100,
+    "top_k": 5,
+    "user_query": "my emp Id Is EMP1001",
+    "citation_document_names_with_scores": [],
+    "response_from_llm_first_50_words": "I've updated my records, and I see that your new employee ID is indeed EMP1001.",
+    "response": "I've updated my records, and I see that your new employee ID is indeed EMP1001."
+  },
+  {
+    "chunk_size": 500,
+    "chunk_overlap": 100,
+    "top_k": 5,
+    "user_query": "what is my name and emp id",
+    "citation_document_names_with_scores": [
+      {
+        "document": "onboarding.txt",
+        "score": 0.21114063262939453
+      },
+      {
+        "document": "leave_policy.txt",
+        "score": 0.1498364508152008
+      },
+      {
+        "document": "leave_policy.txt",
+        "score": 0.05673564597964287
+      },
+      {
+        "document": "test_doc.txt",
+        "score": 0.03858499228954315
+      }
+    ],
+    "response_from_llm_first_50_words": "Nice to answer your question, Rahul. Your name is Rahul, and your employee ID is EMP1001.",
+    "response": "Nice to answer your question, Rahul.\n\nYour name is Rahul, and your employee ID is EMP1001."
+  },
+  {
+    "chunk_size": 500,
+    "chunk_overlap": 100,
+    "top_k": 5,
+    "user_query": "I want to apply leave from Dec 18th 2026 to Dec 25th  2026 ",
+    "citation_document_names_with_scores": [],
+    "response_from_llm_first_50_words": "Sure, I can apply for leave. Please tell me which type of leave (annual, casual or sick).",
+    "response": "Sure, I can apply for leave. Please tell me which type of leave (annual, casual or sick)."
+  },
+  {
+    "chunk_size": 500,
+    "chunk_overlap": 100,
+    "top_k": 5,
+    "user_query": "it is annual leave",
+    "citation_document_names_with_scores": [],
+    "response_from_llm_first_50_words": "Here's the leave request. Please check the dates and confirm.",
+    "response": "Here's the leave request. Please check the dates and confirm."
+  },
+  {
+    "chunk_size": 500,
+    "chunk_overlap": 100,
+    "top_k": 5,
+    "user_query": "I want to take leave on 16th Dec 2026 to 26th Dec 2026 ",
+    "citation_document_names_with_scores": [],
+    "response_from_llm_first_50_words": "Sure, I can apply for leave. Please tell me which type of leave (annual, casual or sick).",
+    "response": "Sure, I can apply for leave. Please tell me which type of leave (annual, casual or sick)."
+  },
+  {
+    "chunk_size": 500,
+    "chunk_overlap": 100,
+    "top_k": 5,
+    "user_query": "annual",
+    "citation_document_names_with_scores": [],
+    "response_from_llm_first_50_words": "Here's the leave request. Please check the dates and confirm.",
+    "response": "Here's the leave request. Please check the dates and confirm."
+  },
+  {
+    "chunk_size": 500,
+    "chunk_overlap": 100,
+    "top_k": 5,
+    "user_query": "when am I taking a leave ?",
+    "citation_document_names_with_scores": [],
+    "response_from_llm_first_50_words": "You're asking about your upcoming leave, and you're planning to take leave from December 18th, 2026, to December 25th, 2026.",
+    "response": "You're asking about your upcoming leave, and you're planning to take leave from December 18th, 2026, to December 25th, 2026."
+  },
+  {
+    "chunk_size": 500,
+    "chunk_overlap": 100,
+    "top_k": 5,
+    "user_query": "I want to rasie a tciket ",
+    "citation_document_names_with_scores": [],
+    "response_from_llm_first_50_words": "I'll raise this with HR Operations. Please confirm.",
+    "response": "I'll raise this with HR Operations. Please confirm."
   }
 ]

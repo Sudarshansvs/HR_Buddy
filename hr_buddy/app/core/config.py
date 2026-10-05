@@ -49,5 +49,36 @@ class Settings:
         str(PROJECT_ROOT / "data" / "query_logs.json")
     )
 
+    # Local mock HR system (leave balances, requests, tickets)
+    HR_DB_PATH: str = os.getenv(
+        "HR_DB_PATH",
+        str(PROJECT_ROOT / "data" / "hr_system.sqlite3")
+    )
+
+    # Short-term memory: recent turns kept per chat session
+    SHORT_TERM_MAX_TURNS: int = int(
+        os.getenv("SHORT_TERM_MAX_TURNS", "5")
+    )
+
+    # Long-term memory: facts about each employee, persisted across sessions
+    LONG_TERM_MEMORY_PATH: str = os.getenv(
+        "LONG_TERM_MEMORY_PATH",
+        str(PROJECT_ROOT / "data" / "memory" / "long_term.json")
+    )
+
+    # Facts about one person are few and relevant in non-obvious ways
+    # (location matters for a relocation question), so by default every
+    # fact is used and similarity only ranks them once there are more than TOP_K
+    LONG_TERM_TOP_K: int = int(
+        os.getenv("LONG_TERM_TOP_K", "8")
+    )
+
+    # Unset by default: cosine scores can be negative for facts that still matter
+    LONG_TERM_MIN_SCORE: float | None = (
+        float(os.environ["LONG_TERM_MIN_SCORE"])
+        if os.getenv("LONG_TERM_MIN_SCORE")
+        else None
+    )
+
 
 settings = Settings()

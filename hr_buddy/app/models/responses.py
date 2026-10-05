@@ -19,3 +19,6 @@ class ChatResponse(BaseModel):
     answer: str
 
     sources: list[Source]
+
+    # Task replies carry a card with buttons that call the task endpoints
+    card: dict | None = None

@@ -24,8 +24,11 @@ class FakeLLMService:
     def __init__(self):
         pass
 
-    def generate(self, question: str, context: str) -> str:
+    def generate(self, question: str, context: str, **kwargs) -> str:
         return f"FAKE_ANSWER: {question}"
+
+    def extract_facts(self, question: str) -> list[str]:
+        return []
 
 
 def setup_module():
@@ -42,6 +45,13 @@ def setup_module():
 def test_upload_text_and_query():
     # import app after monkeypatching
     from hr_buddy.app.main import app
+
+    from hr_buddy.app.api.auth import get_current_user
+
+    # Uploads are for HR admins; skip the login round-trip
+    app.dependency_overrides[get_current_user] = lambda: {
+        "id": "HRADMIN", "name": "Test Admin", "manager_id": None, "role": "admin", "is_manager": False
+    }
 
     client = TestClient(app)
 
@@ -80,3 +90,5 @@ def test_upload_text_and_query():
     # If any sources were returned, ensure they reference the uploaded filename
     if j.get("sources"):
         assert any(s["document"] == filename for s in j.get("sources", []))
+
+    app.dependency_overrides.clear()

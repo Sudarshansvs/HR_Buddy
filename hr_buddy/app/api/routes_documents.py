@@ -1,10 +1,11 @@
 from pathlib import Path
 import io
-from fastapi import APIRouter, UploadFile, File, HTTPException
+from fastapi import APIRouter, Depends, UploadFile, File, HTTPException
 from pydantic import BaseModel
 
 from pypdf import PdfReader
 
+from hr_buddy.app.api.auth import require_admin
 from hr_buddy.app.core.config import settings
 
 # Import the shared chat_service so we can trigger re-indexing on upload
@@ -22,9 +23,11 @@ class UpdateChunkRequest(BaseModel):
     document_name: str
 
 
+# Managing the knowledge base is for HR admins only
 router = APIRouter(
     prefix="/api/v1/documents",
-    tags=["Documents"]
+    tags=["Documents"],
+    dependencies=[Depends(require_admin)]
 )
 
 

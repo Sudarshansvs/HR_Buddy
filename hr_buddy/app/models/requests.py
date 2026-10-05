@@ -65,6 +65,14 @@ class LLMConfig(BaseModel):
     )
 
 
+class Turn(BaseModel):
+    """One earlier question and answer in the conversation."""
+
+    question: str
+
+    answer: str
+
+
 class ChatRequest(BaseModel):
 
     question: str = Field(
@@ -73,7 +81,17 @@ class ChatRequest(BaseModel):
         description="HR question"
     )
 
-    session_id: str | None = None
+    session_id: str | None = Field(
+        default=None,
+        description="Chat session id, used for short-term memory"
+    )
+
+    # Sent by the client so the conversation survives backend restarts;
+    # when omitted, the backend falls back to its own record for session_id
+    history: list[Turn] | None = Field(
+        default=None,
+        description="Recent turns of this conversation, oldest first"
+    )
 
     rag_config: RAGConfig | None = Field(
         default=None,
